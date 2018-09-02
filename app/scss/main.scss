@@ -66,7 +66,18 @@ header {
   margin-top: 1.75rem;
   width: 2.5rem;
   display: none; }
-
+.menu-opener-inner.background_color_white:after {
+	background: #fff;
+}
+.menu-opener-inner.background_color_black:after {
+	background: #000;
+}
+.menu-opener-inner.background_color_white:before {
+	background: #fff;
+}
+.menu-opener-inner.background_color_black:before {
+	background: #000;
+}
 .menu-opener-inner.active::before {
   /* -webkit-transform: translateY(0rem) rotate(-45deg); */
   -ms-transform: translateY(0rem) rotate(-45deg);
@@ -88,7 +99,7 @@ header {
   transform: translateY(0.25rem); }
 
 .menu-opener-inner::before, .menu-opener-inner::after {
-  background: white;
+ 
   content: '';
   display: block;
   height: 3px;
@@ -460,14 +471,35 @@ p.precision_section_title {
 
 /* CONTACT FORM BEGIN*/
 .get_odrer_form {
-	max-width: 450px;
+	max-width: 400px;
     position: relative;
+    background: #fff;
     border: 1px solid #000;
-	padding: 20px;
+	padding: 25px;
 	margin: auto;
 }
+.get_odrer_form_title {
+	text-align: center;
+	font-family: "Open Sans", sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+	color: #000;
+	font-weight: 500;
+}
+.get_order_form_form_submit {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	color: #000;
+	text-align: center;
+	padding: 4px 25px;
+	background: none;
+	border: 1px solid #000;
+	font-weight: 700;
+	font-family: "Open Sans", sans-serif;
+}
 .font_background_form {
-	background: #fff;
+	
 	position: absolute;
 	width: 100%;
 	z-index: -1;
@@ -478,12 +510,18 @@ p.precision_section_title {
 .get_odrer_form_form_input {
 	border: none;
 	margin-bottom: 10px;
-	padding: 4px 0px;
+	padding: 2px 0px;
 	outline: none;
 	color: #000;
 	display: block;
 	width: 100%;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 700;
 	border-bottom: 1px solid #000;
+}
+input.get_odrer_form_form_input::-webkit-input-placeholder { 
+  color: #000; 
+      
 }
 .get_odrer_form_form_textarea {
 	display: block;

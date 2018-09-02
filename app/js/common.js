@@ -47,6 +47,18 @@ $(document).ready(function() {
                  color=$(this).attr("alt");
                     $("header").css("border-color",color);
             $("header").find("a").css("color",color);
+            $(".menu-opener-inner").removeClass("active");
+            if (color=="#fff")
+            {
+               $(".menu-opener-inner").removeClass("background_color_black").addClass("background_color_white");
+               $(".menu-opener-inner").css("background",color);
+            }
+            if (color=="#000")
+            {
+               $(".menu-opener-inner").removeClass("background_color_white").addClass("background_color_black");
+                $(".menu-opener-inner").css("background",color);
+            }
+             
                      }
             
           
@@ -62,6 +74,7 @@ $(document).ready(function() {
 $(".popup").magnificPopup();
 $(".menu-opener-inner").click(function() {
  $(this).toggleClass("active");
+  $(this).removeAttr("style");
  $(".navigation").fadeToggle();
 });
 
