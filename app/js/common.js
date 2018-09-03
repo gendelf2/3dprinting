@@ -1,8 +1,10 @@
-$(document).ready(function() {
- var owl = $(".footer_bottom_slider_slider");
-     owl.owlCarousel({     
-       loop:true, 
-       dots: false,
+ var owls = $(".footer_bottom_slider_slider");
+     $(".footer_bottom_slider_slider").owlCarousel({     
+      loop:true, 
+       dots: true,
+       autoplay: true,
+        smartSpeed:1000, //Время движения слайда
+       autoplayTimeout:1000, //Время смены слайда
        responsive:{ //Адаптивность. Кол-во выводимых элементов при определенной ширине.
         0:{
                         items:1
@@ -26,6 +28,16 @@ $(document).ready(function() {
        itemsMobile: true,
        pagination: false
             });
+$(document).ready(function() {
+
+  $(".owl-nexts").click(function() {
+    alert("good");
+       $('.owl-next').trigger('click');
+       
+     })
+     $(".navigation_for_gallery_left").click(function() {
+       $('.owl-prev').trigger('click');
+     });
     var countbox = ".section";
     $(window).on("scroll load resize", function(){
 
@@ -80,6 +92,7 @@ $(".menu-opener-inner").click(function() {
 
 $(".top_slider_inside").owlCarousel({     
        loop:true, 
+       autoplay: true,
        smartSpeed:1000, //Время движения слайда
        autoplayTimeout:6000, //Время смены слайда
        responsive:{ //Адаптивность. Кол-во выводимых элементов при определенной ширине.
@@ -107,8 +120,10 @@ $(".top_slider_inside").owlCarousel({
             });
 
 $(document).ready(function() {
+  var lastId,
   topMenu = $(".navigation"),
  menuItems = topMenu.find("a"),
+   topMenuHeight = topMenu.outerHeight() + 0,
   // Anchors corresponding to menu items
   scrollItems = menuItems.map(function() {
     var item = $($(this).attr("href"));

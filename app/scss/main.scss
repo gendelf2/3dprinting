@@ -1,6 +1,7 @@
 @import '_normalize';
 .section_full {
 	height: 100vh;
+	position: relative;
 
 }
 .section_top {
@@ -268,6 +269,11 @@ margin-top: 40px;
 }
 /* COLORS STYLE END*/
 /* PRICES STYLE BEGIN*/
+.prices  {
+	    vertical-align: middle;
+    display: table-cell;
+    width: 1%;
+}
 .prices_bottom_table td {
 	padding: 20px;
 	text-align: center;
@@ -295,6 +301,13 @@ margin-top: 40px;
 }
 /* PRICES STYLE END*/
 /* FILLING STYLE BEGIN*/
+
+.filling_inside {
+	vertical-align: middle;
+	display: table-cell;
+	width: 1%;
+	height: 100vh;
+}
 .filling_left p {
 	font-family: "Open Sans", sans-serif;
 	font-weight: 400;
@@ -387,7 +400,7 @@ margin-top: 40px;
 }
 .precision_center {
 	vertical-align: middle;
-	height: 85vh;
+	height: 100vh;
 	display: table-cell;
 }
 .precision_center p {
@@ -519,7 +532,7 @@ p.precision_section_title {
 	font-weight: 700;
 	border-bottom: 1px solid #000;
 }
-input.get_odrer_form_form_input::-webkit-input-placeholder { 
+.font_background_form input::-webkit-input-placeholder{ 
   color: #000; 
       
 }
@@ -749,11 +762,24 @@ position: absolute;
 /* FOOTER STYLE END*/
 
 /* MEDIA STYLE BEGIN*/
+@media only screen and (max-height:  800px) {
+	.section_full {
+		height: 120vh;
+		margin: 20px 0px;
+	}
+	.precision {
+
+		height: 120vh;
+	}
+	}
 @media only screen and (max-width: 1200px) {
 	.menu-opener-inner {
 		display: block;
 		float: right;
 
+	}
+	.section_full {
+		height: 115vh;
 	}
 	.navigation {
         padding: 0px;
