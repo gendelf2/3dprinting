@@ -225,6 +225,12 @@ margin-top: 40px;
 }
 /* PLASTIC STYLE END*/
 /* COLORS STYLE BEGIN*/
+.colors_inside  {
+	height: 100vh;
+	vertical-align: middle;
+	display: table-cell;
+	width: 1%;
+}
 .colors_item_right_item {
 	width: 75px;
 	height: 75px;
